@@ -6,8 +6,8 @@
   --head: "Cinzel", serif;
   --body: "Lora", serif;
   --sub: "Quattrocento", serif;
-  --background-url: url("./src/assets/background.jpg");
-  --blur-background: url("./src/assets/blur-background.jpg");
+  --background-url: url("https://i.imgur.com/9s3NJVg.jpg");
+  --blur-background: url("https://i.imgur.com/QfbHzIt.jpg");
 }
 
 * {
