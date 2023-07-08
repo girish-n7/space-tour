@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 // import React from "react";
+import { Link } from "react-router-dom";
 
 export default function DestinationCard({
   name,
@@ -36,12 +37,9 @@ export default function DestinationCard({
           {cardStatus}
         </p>
         {status === "filled" ? null : (
-          <button
-            className="card--buy"
-            onClick={() => (window.location.href = "/about")}
-          >
-            Buy!
-          </button>
+          <Link to={"/about"}>
+            <button className="card--buy">Buy!</button>
+          </Link>
         )}
       </div>
       <div className="card--head">

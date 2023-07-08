@@ -2,8 +2,8 @@
 
 export default function Error() {
   return (
-    <div>
-      <p>
+    <div className="home--container">
+      <p style={{ color: "red" }}>
         404. <br />
         Page not found
       </p>
