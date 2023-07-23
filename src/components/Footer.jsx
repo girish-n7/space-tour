@@ -1,26 +1,35 @@
-// import React from "react";
+import { useLocation } from "react-router-dom";
+import gitHubLogo from "../assets/gitHub.svg";
+import linkedInLogo from "../assets/linkedIn.svg";
+import emailLogo from "../assets/email.svg";
+import userLogo from "../assets/user.svg";
 
 export default function Footer() {
-  const portfolio = "";
+  const portfolio = "https://girish-n7.github.io/portfolio/";
   const gitHub = "https://github.com/girish-n7";
   const linkedIn = "https://www.linkedin.com/in/girish-n-7075ba1a4";
   const email = "mailto: ngirish1729@gmail.com";
 
+  const path = useLocation().pathname;
+  let footerStyle = {
+    backgroundColor: path === "/" ? "transparent" : "rgb(2, 5, 6)",
+  };
+
   return (
-    <footer>
+    <footer style={footerStyle}>
       <p className="footer--content">
         © 2023. Made by Girish N{" "}
-        <a href={portfolio} title="Portfolio">
-          <i className="fa-solid fa-user fa-lg icon"></i>
+        <a href={portfolio} title="portfolio">
+          <img src={userLogo} className="footer--logo" alt=""></img>
         </a>
         <a href={linkedIn} title="LinkedIn">
-          <i className="fa-brands fa-linkedin-in fa-lg icon"></i>
+          <img src={linkedInLogo} className="footer--logo" alt=""></img>
         </a>
         <a href={gitHub} title="GitHub">
-          <i className="fa-brands fa-github fa-lg icon"></i>
+          <img src={gitHubLogo} className="footer--logo" alt=""></img>
         </a>
         <a href={email} title="email">
-          <i className="fa-solid fa-envelope fa-lg icon"></i>
+          <img src={emailLogo} className="footer--logo" alt=""></img>
         </a>
       </p>
     </footer>

@@ -1,4 +1,3 @@
-// import React from "react";
 import DestinationCard from "./DestinationCard";
 import { data } from "../data/destinationDB";
 

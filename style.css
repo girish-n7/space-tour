@@ -52,7 +52,6 @@ header {
   right: 0;
   height: 70px;
   z-index: 2;
-  background-color: rgba(0, 0, 0, 0.721);
   display: flex;
   border-bottom: 1px solid white;
 }
@@ -60,11 +59,17 @@ header {
 .header--title {
   font-size: 1.8rem;
   margin-right: auto;
-  padding: 20px 70px;
+  padding: 20px 60px;
   background-color: transparent;
   font-family: var(--sub);
   font-style: italic;
   cursor: pointer;
+  display: flex;
+}
+
+.header--logo {
+  background-color: transparent;
+  margin: 0 10px;
 }
 
 .header--title p {
@@ -233,17 +238,24 @@ footer {
   left: 0;
   right: 0;
   z-index: 2;
-  text-align: center;
-  background-color: transparent;
 }
 
 .footer--content,
 footer a {
   font-size: 1rem;
-  padding: 10px;
+  margin: 0 auto;
+  padding: 5px;
+  display: flex;
+  width: fit-content;
+  align-items: center;
   background-color: transparent;
 }
 
-.icon {
+footer a {
+  padding-left: 10px;
+}
+
+.footer--logo {
+  height: 1.2rem;
   background-color: transparent;
 }
