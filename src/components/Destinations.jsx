@@ -1,6 +1,5 @@
 // import React from "react";
 import DestinationCard from "./DestinationCard";
-import Transitions from "./Transition";
 import { data } from "../data/destinationDB";
 
 export default function Destinations() {
@@ -18,10 +17,8 @@ export default function Destinations() {
   });
 
   return (
-    <div className="destinations--container">
-      <Transitions>
-        <div className="card--container">{cardMap}</div>
-      </Transitions>
+    <div className="destinations--container fade">
+      <div className="card--container">{cardMap}</div>
     </div>
   );
 }

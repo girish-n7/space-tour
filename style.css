@@ -1,13 +1,14 @@
 :root {
   --text: #ffffff;
-  --background: #141414;
+  --background: black;
   --primary-button: #ff4c29;
   --secondary-button: #eef6f1;
   --head: "Cinzel", serif;
   --body: "Lora", serif;
   --sub: "Quattrocento", serif;
   --background-url: url("https://i.imgur.com/9s3NJVg.jpg");
-  --blur-background: url("https://i.imgur.com/QfbHzIt.jpg");
+  --gradient-bg: radial-gradient(rgb(23, 43, 52), black);
+  --card-bg: rgba(40, 40, 40, 0.468);
 }
 
 * {
@@ -27,8 +28,19 @@ button {
   cursor: pointer;
 }
 
-.motion--div {
-  background-color: transparent;
+.fade {
+  opacity: 0;
+  animation: fadeIn 0.9s 1 ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* header */
@@ -39,7 +51,8 @@ header {
   left: 0;
   right: 0;
   height: 70px;
-  background-color: transparent;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.721);
   display: flex;
   border-bottom: 1px solid white;
 }
@@ -113,7 +126,7 @@ header {
 
 .destinations--container,
 .about--container {
-  background-image: var(--blur-background);
+  background-image: var(--gradient-bg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -133,7 +146,7 @@ header {
 }
 
 .card--boundary {
-  background-color: rgba(32, 32, 32, 0.588);
+  background-color: var(--card-bg);
   margin: 10px;
   height: 17rem;
   width: 24rem;
@@ -203,7 +216,7 @@ header {
 .about--text {
   font-size: 1.4rem;
   font-family: var(--sub);
-  background-color: rgba(32, 32, 32, 0.588);
+  background-color: var(--card-bg);
   border-radius: 10px;
   width: 55%;
   margin: 0 auto;
@@ -219,6 +232,7 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 2;
   text-align: center;
   background-color: transparent;
 }
